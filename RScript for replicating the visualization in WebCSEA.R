@@ -13,7 +13,6 @@ heatmap_combine <- heatmap_combine[,idx]
 organ_ref_with_p <- data.frame(organ_ref,t(heatmap_combine),check.names=F)
 organ_ref_with_p_logp <- data.frame(organ_ref_with_p,-log10( unlist(heatmap_combine[4,])),check.names=F)
 colnames(organ_ref_with_p_logp)[ncol(organ_ref_with_p_logp)] <- "input_list_combined_log10p"
-colnames(organ_ref_with_p_logp)[3] <- "Organ_system"
 colnames(organ_ref_with_p_logp)[4] <- "Tissue"
 p1 <- ggplot(organ_ref_with_p_logp, aes(x=Organ_system, y=input_list_combined_log10p,col=Organ_system)) + ggtitle("Organ system") + 
     geom_jitter() + theme_bw() + theme(plot.title = element_text(hjust = 0.5),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),axis.text.x = element_text(angle = 45, hjust = 1),plot.margin = margin(0.5,0.5,1,2, "cm")) + geom_hline(yintercept=-log10(0.05/1355), linetype="dashed", color = "red", size=1) + geom_hline(yintercept=-log10(0.001), color = "grey", size=1) + ylim(0, max(organ_ref_with_p_logp$input_list_combined_log10p) +1.2)
