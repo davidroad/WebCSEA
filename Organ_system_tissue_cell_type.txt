@@ -1086,7 +1086,7 @@ TS_Muscle_pericyte cell	Adult	Muscular system	TS_Muscle	pericyte cell	Pericyte c
 TS_Muscle_skeletal muscle satellite stem cell	Adult	Muscular system	TS_Muscle	skeletal muscle satellite stem cell	Skeletal muscle satellite cell	CL:0000594	Muscle organ	UBERON:0001630
 TS_Muscle_slow muscle cell	Adult	Muscular system	TS_Muscle	slow muscle cell	Cell of skeletal muscle	CL:0000188	Muscle organ	UBERON:0001630
 TS_Muscle_smooth muscle cell	Adult	Muscular system	TS_Muscle	smooth muscle cell	Smooth muscle cell	CL:0000192	Muscle organ	UBERON:0001630
-TS_Muscle organ_t cell	Adult	Muscular system	TS_Muscle	t cell	T cell	CL:0000084	Muscle organ	UBERON:0001630
+TS_Muscle_t cell	Adult	Muscular system	TS_Muscle	t cell	T cell	CL:0000084	Muscle organ	UBERON:0001630
 TS_Muscle_tendon cell	Adult	Muscular system	TS_Muscle	tendon cell	Cell of skeletal muscle	CL:0000188	Muscle organ	UBERON:0001630
 TS_Pancreas_b cell	Adult	Digestive system	TS_Pancreas	b cell	B cell	CL:0000236	Pancreas	UBERON:0001264
 TS_Pancreas_endothelial cell	Adult	Digestive system	TS_Pancreas	endothelial cell	Endothelial cell	CL:0000115	Pancreas	UBERON:0001264
