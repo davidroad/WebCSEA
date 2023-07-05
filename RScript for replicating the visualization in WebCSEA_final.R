@@ -172,7 +172,7 @@ res_Fetal = res_Fetal  %>% select(-delabel)%>% left_join(label9)
 p8_clean <- ggplot(res_Adult, aes(x=Organ_system, y=input_list_raw_log10p,col=Organ_system)) + ggtitle("Adult Organ system") +
     geom_jitter() + theme_bw() + theme(plot.title = element_text(hjust = 0.5),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),axis.text.x = element_text(angle = 45, hjust = 1),plot.margin = margin(0.5,0.5,1,2, "cm")) + geom_hline(yintercept=-log10(0.05/1355), linetype="dashed", color = "red", size=1) + geom_hline(yintercept=-log10(0.001), color = "grey", size=1) + ylim(0, max(res_Adult$input_list_raw_log10p) +1.2)
 pdf(paste0(output_path,"/",run_name,"_raw_pvalue_clean_Adult_Organ_system.pdf"),12,8)
-print(p8)
+print(p8_clean)
 dev.off()
 
 p8 <- ggplot(res_Adult, aes(x=Organ_system, y=input_list_raw_log10p,col=Organ_system, label = delabel)) + geom_text_repel(size = 3)+ ggtitle("Adult Organ system") +
@@ -184,7 +184,7 @@ dev.off()
 p9_clean <- ggplot(res_Fetal, aes(x=Organ_system, y=input_list_raw_log10p,col=Organ_system)) + ggtitle("Fetal Organ system") +
     geom_jitter() + theme_bw() + theme(plot.title = element_text(hjust = 0.5),panel.grid.major = element_blank(),panel.grid.minor = element_blank(),axis.text.x = element_text(angle = 45, hjust = 1),plot.margin = margin(0.5,0.5,1,2, "cm")) + geom_hline(yintercept=-log10(0.05/1355), linetype="dashed", color = "red", size=1) + geom_hline(yintercept=-log10(0.001), color = "grey", size=1) + ylim(0, max(res_Fetal$input_list_raw_log10p) +1.2)
 pdf(paste0(output_path,"/",run_name,"_raw_pvalue_clean_Fetal_Organ_system.pdf"),12,8)
-print(p9)
+print(p9_clean)
 dev.off()
 
 p9 <- ggplot(res_Fetal, aes(x=Organ_system, y=input_list_raw_log10p,col=Organ_system, label = delabel))+ geom_text_repel(size = 3) + ggtitle("Fetal Organ system") +
